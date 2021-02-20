@@ -14,7 +14,7 @@ docker pull fullaxx/chaos-dispensary
 docker build -t="fullaxx/chaos-dispensary" github.com/Fullaxx/chaos-dispensary
 ```
 
-## Launch chaos-dispensary Docker Container
+## Launch chaos-dispensary docker container
 Run chaos-dispensary binding to 172.17.0.1:80
 ```
 docker run -d -p 172.17.0.1:80:8080 fullaxx/chaos-dispensary
