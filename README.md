@@ -14,10 +14,40 @@ docker pull fullaxx/chaos-dispensary
 docker build -t="fullaxx/chaos-dispensary" github.com/Fullaxx/chaos-dispensary
 ```
 
+## Configuration Options
+Adjust chaos2redis to keep 25 lists of 999999 random numbers in redis \
+Default: 10 lists of 100000 random numbers each
+```
+-e LISTS=25 -e LSIZE=999999
+```
+Adjust chaos2redis to use 2 hashing cores during random number generation \
+Default: 1 hashing core
+```
+-e CORES=2
+```
+Adjust chaos2redis to grab 6 blocks of chaos per thread before transmutation \
+Default: 4 blocks of chaos per thread
+```
+-e CHAOS=6
+```
+Adjust chaos2redis to ping <code>long_spin()</code> and <code>time_spin()</code> to the same thread \
+Default: <code>long_spin()</code> and <code>time_spin()</code> will each spin their own thread
+```
+-e SAVEACORE=1
+```
+
 ## Launch chaos-dispensary docker container
-Run chaos-dispensary binding to 172.17.0.1:80
+Run chaos-dispensary binding to 172.17.0.1:80 using default configuration
 ```
 docker run -d -p 172.17.0.1:80:8080 fullaxx/chaos-dispensary
+```
+Run chaos-dispensary binding to 172.17.0.1:80 using a conservative configuration
+```
+docker run -d -e SAVEACORE=1 -e CHAOS=2 -p 172.17.0.1:80:8080 fullaxx/chaos-dispensary
+```
+Run chaos-dispensary binding to 172.17.0.1:80 using a multi-core configuration
+```
+docker run -d -e CORES=4 -p 172.17.0.1:80:8080 fullaxx/chaos-dispensary
 ```
 
 ## Using curl to retrieve numbers
