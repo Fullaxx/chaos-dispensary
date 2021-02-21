@@ -30,7 +30,7 @@ Default: 4 blocks of chaos per thread
 ```
 -e CHAOS=6
 ```
-Adjust chaos2redis to ping <code>long_spin()</code> and <code>time_spin()</code> to the same thread \
+Adjust chaos2redis to pin <code>long_spin()</code> and <code>time_spin()</code> to the same thread \
 Default: <code>long_spin()</code> and <code>time_spin()</code> will each spin their own thread
 ```
 -e SAVEACORE=1
