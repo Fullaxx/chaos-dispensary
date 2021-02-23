@@ -50,7 +50,7 @@ Run chaos-dispensary binding to 172.17.0.1:80 using a multi-core configuration
 docker run -d -e CORES=4 -p 172.17.0.1:80:8080 fullaxx/chaos-dispensary
 ```
 
-## Using curl to retrieve numbers
+## Using curl to retrieve random numbers
 By default the output will be a space delimited string of numbers. \
 If the header <code>Accept: application/json</code> is sent, the output will be json. \
 Get 1 number from the dispensary:
