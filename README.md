@@ -15,25 +15,25 @@ docker build -t="fullaxx/chaos-dispensary" github.com/Fullaxx/chaos-dispensary
 ```
 
 ## Configuration Options
-Adjust chaos2redis to keep 25 lists of 999999 random numbers in redis \
-Default: 10 lists of 100000 random numbers each
-```
--e LISTS=25 -e LSIZE=999999
-```
-Adjust chaos2redis to use 2 hashing cores during random number generation \
-Default: 1 hashing core
-```
--e CORES=2
-```
-Adjust chaos2redis to grab 6 blocks of chaos per thread before transmutation \
-Default: 4 blocks of chaos per thread
-```
--e CHAOS=6
-```
 Adjust chaos2redis to pin <code>long_spin()</code> and <code>time_spin()</code> to the same thread \
 Default: <code>long_spin()</code> and <code>time_spin()</code> will each spin their own thread
 ```
 -e SAVEACORE=1
+```
+Adjust chaos2redis to acquire 6 blocks of chaos per thread before transmutation \
+Default: 4 blocks of chaos per thread
+```
+-e CHAOS=6
+```
+Adjust chaos2redis to use 2 hashing cores for chaos transmutation \
+Default: 1 hashing core
+```
+-e CORES=2
+```
+Adjust chaos2redis to keep 25 lists of 999999 random numbers in redis \
+Default: 10 lists of 100000 random numbers each
+```
+-e LISTS=25 -e LSIZE=999999
 ```
 
 ## Launch chaos-dispensary docker container
