@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.com/Fullaxx/CHAOSgen.svg?branch=master)](https://travis-ci.com/Fullaxx/CHAOSgen)
-
-# chaos-dispensary
+# chaos-dispensary [![Actions Status](https://github.com/Fullaxx/CHAOSgen/workflows/CI/badge.svg)](https://github.com/Fullaxx/CHAOSgen/actions)
 A web service that dispenses random numbers built from
 * [redis](https://redis.io/)
 * [CHAOSgen](https://github.com/Fullaxx/CHAOSgen)
