@@ -4,7 +4,7 @@ A web service that dispenses random numbers built from
 * [CHAOSgen](https://github.com/Fullaxx/CHAOSgen)
 
 ## Base Docker Image
-[Debian](https://hub.docker.com/_/debian) buster-slim (x64)
+[Debian](https://hub.docker.com/_/debian) bullseye-slim (x64)
 
 ## Get the image from Docker Hub or build it yourself
 ```

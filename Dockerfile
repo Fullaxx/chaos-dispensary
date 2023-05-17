@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
 # Install build tools and compile CHAOSgen
-FROM debian:buster-slim AS build
+FROM debian:bullseye-slim AS build
 RUN apt-get update && \
 	apt-get install -y build-essential git ca-certificates \
 	  libgcrypt-dev libhiredis-dev libmicrohttpd-dev && \
